@@ -1,0 +1,418 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #000;
+    color: #fff;
+    line-height: 1.6;
+}
+
+h1, h2, h3, h4 {
+    font-family: 'Playfair Display', serif;
+    font-weight: normal;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+a {
+    text-decoration: none;
+    color: #fff;
+}
+
+ul {
+    list-style: none;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+/* Кнопки пробоного урока и отправки инфы для прробного  */
+.btn {
+    display: inline-block;
+    background-color: #c25b7c;
+    color: #fff;
+    padding: 12px 30px;
+    border: none;
+    border-radius: 5px;
+    font-size: 14px;
+    text-transform: uppercase;
+    font-weight: 500;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #a74768;
+}
+
+section h2 {
+    font-size: 42px;
+    margin-bottom: 40px;
+    text-align: center;
+    font-style: italic;
+}
+
+/* Шапка сайта с якорными штуками */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 1000;
+}
+/* Штука для навигационных блоков */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-family: 'Playfair Display', serif;
+    font-size: 22px;
+    font-style: italic;
+}
+
+.menu {
+    display: flex;
+    gap: 30px;
+}
+
+.menu li a {
+    font-size: 14px;
+    transition: all 0.3s ease;
+}
+
+.menu li a:hover {
+    color: #c25b7c;
+}
+
+/* Для главного экрана поганого который слетал по кд*/
+.hero {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    background-image: url('images/valorant.png');
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+/* Чтобы на заднем плане была */
+.hero .container {
+    position: relative;
+    z-index: 1;
+}
+
+.hero h1 {
+    font-size: 72px;
+    margin-bottom: 20px;
+    font-style: italic;
+}
+
+.hero .subtitle {
+    font-size: 18px;
+    color: #c25b7c;
+    margin-bottom: 30px;
+}
+
+/* Чтобы мейн экран красивенько смотрелся иначе сьезжает */
+.hero .description {
+    max-width: 600px;
+    margin-top: 30px;
+    font-size: 16px;
+    opacity: 0.8;
+}
+
+.for-whom {
+    padding: 100px 0;
+    position: relative;
+}
+
+/* Настройка одного гадского перышка малюсенького */
+.for-whom::after {
+    content: '';
+    background-image: url('images/pero.png');
+    width: 180px;
+    height: 180px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 70px;
+    right: 80px;
+    opacity: 0.7;
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.card {
+    background-color: #111;
+    border-radius: 5px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+.card img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+}
+
+.card p {
+    padding: 20px;
+    font-size: 14px;
+    color: #ddd;
+}
+
+.why-us {
+    padding: 100px 0;
+    background-color: #050505;
+    position: relative;
+    background-image: url('images/ballet-dancer.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+.before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.after {
+    content: '';
+    background-image: url('images/feather.png');
+    width: 100px;
+    height: 100px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 50px;
+    right: 100px;
+    opacity: 0.5;
+    z-index: 1;
+}
+
+/* Секция для пробных уроков */
+.trial-lesson {
+    padding: 100px 0;
+    text-align: center;
+    background-image: url('images/trial-bg.jpg');
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+.trial-lesson::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.trial-lesson .container {
+    position: relative;
+    z-index: 1;
+}
+
+.trial-lesson p {
+    max-width: 600px;
+    margin: 0 auto 40px;
+    color: #ddd;
+}
+
+.trial-form {
+    display: flex;
+    flex-direction: column;
+    max-width: 400px;
+    margin: 0 auto;
+    gap: 15px;
+}
+
+.trial-form input {
+    padding: 15px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.tariffs {
+    padding: 100px 0;
+    position: relative;
+}
+
+.tariffs::after {
+    content: '';
+    background-image: url('images/pero.png');
+    width: 100px;
+    height: 100px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 50px;
+    right: 100px;
+    opacity: 0.5;
+}
+
+.tariff-cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.tariff-card {
+    background-color: #c25b7c;
+    color: #fff;
+    padding: 30px;
+    border-radius: 5px;
+    text-align: center;
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+.tariff-card:hover {
+    transform: translateY(-10px);
+}
+
+.tariff-card h3 {
+    font-size: 24px;
+    margin-bottom: 15px;
+}
+
+.tariff-card p {
+    margin-bottom: 10px;
+    font-size: 14px;
+}
+
+.tariff-card .price {
+    font-size: 32px;
+    font-weight: bold;
+    margin: 20px 0;
+}
+
+/* краты с отзывами которые должны были крутиться но нет */
+.reviews {
+    padding: 100px 0;
+    background-color: #050505;
+}
+
+.review-cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.review-card {
+    background-color: #111;
+    padding: 30px;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+.review-card:hover {
+    transform: translateY(-5px);
+    
+}
+
+.review-card h4 {
+    font-size: 16px;
+    color: #c25b7c;
+    margin-bottom: 15px;
+}
+
+.review-card p {
+    font-size: 14px;
+    font-style: italic;
+    color: #ddd;
+}
+
+/* нижний бар на сайте */
+footer {
+    padding: 40px 0;
+    background-color: #c25b7c;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer-menu {
+    display: flex;
+    gap: 30px;
+}
+
+.footer-menu li a {
+    font-size: 14px;
+}
+
+.footer-menu li a:hover {
+    text-decoration: underline;
+}
+
+/* Хз почему, добавил бесполезную адаптацию потому что без нее картинки с людьми ломаются*/
+@media (max-width: 1024px) {
+    .cards, .tariff-cards, .review-cards {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .menu {
+        display: none;
+    }
+    
+    .hero h1 {
+        font-size: 48px;
+    }
+    
+    .cards, .tariff-cards, .review-cards {
+        grid-template-columns: 1fr;
+    }
+    
+   
+    
+    .footer-content {
+        flex-direction: column;
+        gap: 20px;
+    }
+    
+    .footer-menu {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+} 
